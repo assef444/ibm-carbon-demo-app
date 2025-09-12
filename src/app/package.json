@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.67.0",
     "@carbon/react": "^1.91.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
