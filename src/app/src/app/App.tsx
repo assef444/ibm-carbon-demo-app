@@ -1,4 +1,5 @@
-import { Header, 
+import { 
+    Header, 
     HeaderName, 
     SideNav, 
     SideNavItems,
@@ -32,11 +33,7 @@ export default function App() {
                     <HeaderGlobalBar>
                         <HeaderGlobalAction
                             aria-label="Notifications"
-                            badgeCount={2}
-                            id="notification-button"
-                            onBlur={() => { }}
                             onClick={() => { }}
-                            onKeyDown={() => { }}
                             tooltipAlignment="center"
                         >
                             <Notification size={20} />
@@ -50,7 +47,11 @@ export default function App() {
                         </HeaderGlobalAction>
                     </HeaderGlobalBar>
                 </Header>
-                <SideNav isFixedNav expanded={true} isChildOfHeader={false} aria-label="Side navigation">
+                <SideNav 
+                    isFixedNav 
+                    expanded={true} 
+                    isChildOfHeader={false} 
+                    aria-label="Side navigation">
                     <SideNavItems>
                         <SideNavMenu renderIcon={LetterAa} title="Collapsable Section A">
                             <SideNavMenuItem href="https://cassia.solutions">
@@ -91,7 +92,6 @@ export default function App() {
                         </SideNavMenu>
                     </SideNavItems>
                 </SideNav>
-
                 <Content>
                     <Outlet /> {/* this is where app routes get loaded */}
                 </Content>
