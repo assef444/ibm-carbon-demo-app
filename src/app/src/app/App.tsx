@@ -12,7 +12,9 @@ import {
     HeaderGlobalBar,
     HeaderGlobalAction,
  } from '@carbon/react';
-import { 
+import {
+    Home,
+    Bee,
     UserAvatar, 
     Notification, 
     LetterAa, 
@@ -25,9 +27,9 @@ import { Outlet } from 'react-router-dom';
 export default function App() {
     return (
         <>
-            <Theme theme="g90">
+            <Theme theme="white">
                 <Header>
-                    <HeaderName href="#" prefix="IBM">
+                    <HeaderName href="/" prefix="IBM">
                         Carbon Demo App
                     </HeaderName>
                     <HeaderGlobalBar>
@@ -53,6 +55,12 @@ export default function App() {
                     isChildOfHeader={false} 
                     aria-label="Side navigation">
                     <SideNavItems>
+                        <SideNavLink renderIcon={Home} href="/">
+                            Home
+                        </SideNavLink>
+                        <SideNavLink renderIcon={Bee} href="/repos">
+                            Repos
+                        </SideNavLink>
                         <SideNavMenu renderIcon={LetterAa} title="Collapsable Section A">
                             <SideNavMenuItem href="https://cassia.solutions">
                                 Page A-0
