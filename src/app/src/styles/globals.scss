@@ -1,0 +1,19 @@
+@use '@carbon/react';
+@use '@carbon/react/scss/breakpoint' as *;
+
+@use '../app/routes/Home/page' as homePage; // loads Sass partial file
+@use '../app/routes/Repos/page' as repoPage; // loads Sass partial file
+
+.cds--content {
+  margin-top: 3rem;
+  padding: 0;
+  background: var(--cds-background);
+}
+
+.cds--content .cds--css-grid {
+  max-width: 100%;
+  @include breakpoint(md) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
