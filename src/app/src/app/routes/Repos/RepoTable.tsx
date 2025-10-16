@@ -13,7 +13,12 @@ import {
     TableExpandedRow,
 } from '@carbon/react';
 
-const RepoTable = ({ rows, headers }) => {
+interface RepoTableProps {
+    rows: Array<any>;
+    headers: Array<{ key: string; header: string }>;
+}
+
+const RepoTable: React.FC<RepoTableProps> = ({ rows, headers }) => {
     return (
         <DataTable
             rows={rows}
@@ -33,7 +38,7 @@ const RepoTable = ({ rows, headers }) => {
                             <TableRow>
                                 <TableExpandHeader />
                                 {headers.map((header) => (
-                                    <TableHeader key={header.key} {...getHeaderProps({ header })}>
+                                    <TableHeader {...getHeaderProps({ header })}>
                                         {header.header}
                                     </TableHeader>
                                 ))}
